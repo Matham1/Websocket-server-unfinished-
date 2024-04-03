@@ -5,7 +5,7 @@ import requests
 async def handle_message(websocket):
     try:
         while True:
-            websocket.send('{"device"}')
+            await websocket.send('{"device"}')
             
             message = await websocket.recv()
             print(message)
